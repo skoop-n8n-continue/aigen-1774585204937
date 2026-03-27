@@ -1,0 +1,341 @@
+{
+  "app_id": "aigen-1773959918807",
+  "document_version": 1,
+  "sections": {
+    "app_settings": {
+      "primary_color": {
+        "type": "color",
+        "label": "Primary Color",
+        "value": "#12690c"
+      },
+      "secondary_color": {
+        "type": "color",
+        "label": "Secondary Color",
+        "value": "#f9f9f9"
+      },
+      "background_color": {
+        "type": "color",
+        "label": "Background Color",
+        "value": "#ffffff"
+      },
+      "text_color": {
+        "type": "color",
+        "label": "Text Color",
+        "value": "#111111"
+      },
+      "accent_color": {
+        "type": "color",
+        "label": "Accent Color",
+        "value": "#D32F2F"
+      },
+      "header_background": {
+        "type": "color",
+        "label": "Header Background Color",
+        "value": "#1b4f23"
+      },
+      "header_text_color": {
+        "type": "color",
+        "label": "Header Text Color",
+        "value": "#ffffff"
+      },
+      "background_image": {
+        "type": "file",
+        "label": "Background Pattern Image",
+        "value": "assets/background-1773960077831.png",
+        "meta": {
+          "accepted_formats": [
+            "png",
+            "jpg",
+            "svg",
+            "webp"
+          ],
+          "path": "assets/"
+        }
+      }
+    },
+    "storefront": {
+      "store_name": {
+        "type": "text",
+        "label": "Store Name",
+        "value": "Market Square Birmingham"
+      },
+      "logo": {
+        "type": "file",
+        "label": "Store Logo",
+        "value": "assets/logo-1773960054321.png",
+        "meta": {
+          "accepted_formats": [
+            "png",
+            "jpg",
+            "svg"
+          ],
+          "path": "assets/"
+        }
+      },
+      "announcement": {
+        "type": "text",
+        "label": "Ticker Announcement",
+        "value": "🐟 Check out our Seafood counter! Fresh fish flown in daily. Sashimi #1 quality tuna. Ask us about our fin (limited availability). 🐟"
+      }
+    },
+    "categories": {
+      "type": "collection",
+      "label": "Categories",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Category Name"
+        },
+        "sort_order": {
+          "type": "number",
+          "label": "Sort Order",
+          "meta": {
+            "format": "integer"
+          }
+        }
+      },
+      "value": [
+        {
+          "id": "cat_w1n2e3",
+          "name": "Wine & Beer",
+          "sort_order": 1
+        },
+        {
+          "id": "cat_g4r5o6",
+          "name": "Grocery & Pantry",
+          "sort_order": 2
+        },
+        {
+          "id": "cat_s7n8k9",
+          "name": "Snacks & Beverages",
+          "sort_order": 3
+        },
+        {
+          "id": "cat_p1l2t3",
+          "name": "Platters to Order",
+          "sort_order": 4
+        }
+      ]
+    },
+    "products": {
+      "type": "collection",
+      "label": "Products",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Product Name"
+        },
+        "category": {
+          "type": "text",
+          "label": "Category ID"
+        },
+        "sale_price": {
+          "type": "text",
+          "label": "Current/Sale Price"
+        },
+        "regular_price": {
+          "type": "text",
+          "label": "Regular Price (Strikethrough)"
+        },
+        "savings": {
+          "type": "text",
+          "label": "Savings/Tag"
+        }
+      },
+      "value": [
+        {
+          "id": "prod_w00001",
+          "name": "product 2",
+          "category": "cat_w1n2e3",
+          "sale_price": "$17.59",
+          "regular_price": "$21.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00002",
+          "name": "White Haven Marlborough Sauvignon Blanc",
+          "category": "cat_w1n2e3",
+          "sale_price": "$15.99",
+          "regular_price": "$19.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00003",
+          "name": "Josh Chardonnay",
+          "category": "cat_w1n2e3",
+          "sale_price": "$12.79",
+          "regular_price": "$15.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00004",
+          "name": "Josh Cabernet Sauvignon",
+          "category": "cat_w1n2e3",
+          "sale_price": "$12.79",
+          "regular_price": "$16.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00005",
+          "name": "By.ott Rose Wine",
+          "category": "cat_w1n2e3",
+          "sale_price": "$24.79",
+          "regular_price": "$30.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00006",
+          "name": "Caymus 2022 50th Anniversary Cabernet Sauvignon",
+          "category": "cat_w1n2e3",
+          "sale_price": "$67.99",
+          "regular_price": "$84.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00007",
+          "name": "Rombauer Chardonnay 750ml",
+          "category": "cat_w1n2e3",
+          "sale_price": "$39.99",
+          "regular_price": "$49.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_w00008",
+          "name": "Old Nation M-43 Beer",
+          "category": "cat_w1n2e3",
+          "sale_price": "$15.99",
+          "regular_price": "",
+          "savings": ""
+        },
+        {
+          "id": "prod_g00001",
+          "name": "Nostimo Olive Oil, 1L",
+          "category": "cat_g4r5o6",
+          "sale_price": "$39.99",
+          "regular_price": "",
+          "savings": ""
+        },
+        {
+          "id": "prod_g00002",
+          "name": "Chosen Avocado Oil 25.4 oz",
+          "category": "cat_g4r5o6",
+          "sale_price": "$19.99",
+          "regular_price": "$22.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_g00003",
+          "name": "Kitchen Basics, all varieties",
+          "category": "cat_g4r5o6",
+          "sale_price": "2 for $7",
+          "regular_price": "$4.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_g00004",
+          "name": "Rao's Pasta Sauce, all varieties",
+          "category": "cat_g4r5o6",
+          "sale_price": "$7.99",
+          "regular_price": "$9.99",
+          "savings": "Save $2"
+        },
+        {
+          "id": "prod_g00005",
+          "name": "Montebello Pasta, all varieties",
+          "category": "cat_g4r5o6",
+          "sale_price": "$5.49",
+          "regular_price": "$6.99",
+          "savings": "Save $1.50"
+        },
+        {
+          "id": "prod_g00006",
+          "name": "Graza Drizzle",
+          "category": "cat_g4r5o6",
+          "sale_price": "$19.99",
+          "regular_price": "$22.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_g00007",
+          "name": "Graza Sizzle",
+          "category": "cat_g4r5o6",
+          "sale_price": "$16.99",
+          "regular_price": "$19.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_s00001",
+          "name": "Spindrift, all varieties",
+          "category": "cat_s7n8k9",
+          "sale_price": "$6.99",
+          "regular_price": "$9.99",
+          "savings": "Save $3"
+        },
+        {
+          "id": "prod_s00002",
+          "name": "Unique Pretzels, all varieties",
+          "category": "cat_s7n8k9",
+          "sale_price": "$3.99",
+          "regular_price": "$4.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_s00003",
+          "name": "Olipop, all varieties",
+          "category": "cat_s7n8k9",
+          "sale_price": "2 for $5",
+          "regular_price": "",
+          "savings": ""
+        },
+        {
+          "id": "prod_s00004",
+          "name": "Saratoga Water",
+          "category": "cat_s7n8k9",
+          "sale_price": "$24.00",
+          "regular_price": "$39.99",
+          "savings": ""
+        },
+        {
+          "id": "prod_s00005",
+          "name": "Coleen's Breadsticks",
+          "category": "cat_s7n8k9",
+          "sale_price": "$7.99",
+          "regular_price": "",
+          "savings": ""
+        },
+        {
+          "id": "prod_p00001",
+          "name": "Shrimp Platter",
+          "category": "cat_p1l2t3",
+          "sale_price": "Prices vary",
+          "regular_price": "",
+          "savings": "Order with us!"
+        },
+        {
+          "id": "prod_p00002",
+          "name": "Fruit Platter",
+          "category": "cat_p1l2t3",
+          "sale_price": "Prices vary",
+          "regular_price": "",
+          "savings": "Order with us!"
+        },
+        {
+          "id": "prod_p00003",
+          "name": "Veggie Platter",
+          "category": "cat_p1l2t3",
+          "sale_price": "Prices vary",
+          "regular_price": "",
+          "savings": "Order with us!"
+        }
+      ]
+    }
+  }
+}

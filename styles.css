@@ -1,0 +1,229 @@
+/* styles.css */
+/* CSS variables injected via JS from data.json - No default values here */
+:root {
+  --grid-gap: 2rem;
+  --header-height: 120px;
+  --footer-height: 60px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* For digital signage, no scrolling */
+  background-color: var(--background-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+#app-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app-container.loaded {
+  opacity: 1;
+}
+
+/* Header */
+#app-header {
+  background-color: var(--header-background);
+  color: var(--header-text-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  padding: 0 2rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1800px;
+}
+
+#store-logo {
+  max-height: 80px;
+  max-width: 300px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes the logo white on green background */
+}
+
+#store-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Main Content Grid */
+#main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow: hidden; /* No scroll on signage */
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+  height: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.category-column {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.category-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed #e0e0e0;
+  padding-bottom: 0.75rem;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.product-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 80px;
+}
+
+.product-sale-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.product-regular-price {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.product-savings {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/* Ticker Footer */
+#ticker-footer {
+  height: var(--footer-height);
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-top: 4px solid var(--accent-color);
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 30s;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Responsive Scaling for Signage (1080p typically, but flex is good) */
+@media (max-width: 1400px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-name { font-size: 1.15rem; }
+  .product-sale-price { font-size: 1.5rem; }
+  .category-title { font-size: 2.75rem; }
+}
+
+@media (max-width: 800px) {
+  .menu-grid { grid-template-columns: 1fr; }
+}
