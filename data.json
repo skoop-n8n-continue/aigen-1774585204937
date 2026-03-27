@@ -41,7 +41,7 @@
       "background_image": {
         "type": "file",
         "label": "Background Pattern Image",
-        "value": "assets/background-1773960077831.png",
+        "value": "assets/background_image.png",
         "meta": {
           "accepted_formats": [
             "png",
@@ -62,7 +62,7 @@
       "logo": {
         "type": "file",
         "label": "Store Logo",
-        "value": "assets/logo-1773960054321.png",
+        "value": "assets/logo.png",
         "meta": {
           "accepted_formats": [
             "png",
